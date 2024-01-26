@@ -209,7 +209,10 @@ func Get(ctx context.Context, options ...Option) (*Token, error) {
 				c.tokenCode = prompter.Prompt(fmt.Sprintf("Enter MFA code for %s", c.sNum), "")
 			}
 		}
-		sessName := fmt.Sprintf("awsdo-session-%d", time.Now().Unix())
+		sessName := i.GetKey(c.profile, "role_session_name")
+		if sessName == "" {
+			sessName = fmt.Sprintf("awsdo-session-%d", time.Now().Unix())
+		}
 		opt := &sts.AssumeRoleInput{
 			RoleSessionName: &sessName,
 			DurationSeconds: &c.durationSeconds,
