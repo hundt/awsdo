@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/k1LoW/awsdo/cmd"
+import "github.com/hundt/awsdo/cmd"
 
 func main() {
 	cmd.Execute()

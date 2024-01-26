@@ -1,4 +1,4 @@
-module github.com/k1LoW/awsdo
+module github.com/hundt/awsdo
 
 go 1.20
 

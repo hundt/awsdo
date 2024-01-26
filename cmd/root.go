@@ -27,8 +27,8 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/k1LoW/awsdo/token"
-	"github.com/k1LoW/awsdo/version"
+	"github.com/hundt/awsdo/token"
+	"github.com/hundt/awsdo/version"
 	"github.com/mattn/go-isatty"
 	"github.com/pkg/browser"
 	"github.com/spf13/cobra"
